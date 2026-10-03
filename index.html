@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<!-- One CSS file per component. Edit a file to change only that component. -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/hero-ticket.css">
+<link rel="stylesheet" href="css/invitation-text.css">
+<link rel="stylesheet" href="css/photo.css">
+<link rel="stylesheet" href="css/calendar.css">
+<link rel="stylesheet" href="css/venue.css">
+<link rel="stylesheet" href="css/timeline.css">
+<link rel="stylesheet" href="css/dresscode.css">
+<link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<main class="page">
+
+<!-- HERO TICKET -->
+<section class="ticket hero-ticket">
+  <p class="hero-top">Wedding Ticket</p>
+  <img class="hero-globe" src="images/globe.png" alt="">
+  <h1 class="hero-names">Aisha<span class="hero-and">and</span>Rayan</h1>
+  <dl class="hero-grid">
+    <div><dt>Flight &amp; Date</dt><dd>21.06.2027</dd></div>
+    <div><dt>Class</dt><dd>First Class</dd></div>
+    <div><dt>Destination</dt><dd>Lake Como, Italy</dd></div>
+    <div><dt>Wedding Location</dt><dd>Villa Example</dd></div>
+  </dl>
+  <img class="hero-stamp reveal-stamp" src="images/stamp.png" alt="Nihala and Fasil postmark">
+  <p class="hero-bottom">Boarding for love</p>
+</section>
+
+<!-- INVITATION TEXT -->
+<section class="invite-text reveal">
+  <h2>Dear friends<br>and family</h2>
+  <p>We are thrilled to invite you to join us as we embark on the greatest adventure of our lives. Your love and support mean the world to us, and we can't wait to celebrate together in a place close to our hearts.</p>
+</section>
+
+<!-- PHOTO + FLIGHT PATH -->
+<section class="photo-block reveal">
+  <div class="photo" role="img" aria-label="Couple photo placeholder"><span>Your photo here<br><small>images/couple.jpg</small></span></div>
+  <svg class="flight-path" viewBox="0 0 300 50" aria-hidden="true">
+    <path id="path1" d="M5 40 C60 10, 120 45, 190 25 S270 20, 285 22"/>
+    <path class="plane" d="M0-5l12 5-12 5 3-5z"/>
+  </svg>
+</section>
+
+<!-- CALENDAR -->
+<section class="invite-text reveal">
+  <h2>We are waiting<br>for you</h2>
+  <p>Pack your bags and join us for a weekend filled with love, laughter and unforgettable memories.</p>
+</section>
+<section class="ticket calendar reveal">
+  <h3>June 2027</h3>
+  <div class="cal-grid">
+    <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b>
+    <span></span><span class="cal-day">1</span><span class="cal-day">2</span><span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span><span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day">14</span><span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day cal-hl">21</span><span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
+  </div>
+  <p class="cal-save">Save the date</p>
+  <p class="cal-date">21.06.2027</p>
+</section>
+
+<!-- VENUE -->
+<section class="ticket venue reveal">
+  <h2>Venue</h2>
+  <p class="venue-name">Villa Example</p>
+  <p>Via Esempio 1, 22000 Lake Como, Italy</p>
+  <a class="btn" href="https://maps.google.com" target="_blank" rel="noopener">How to get there</a>
+  <div class="photo photo-wide" role="img" aria-label="Venue photo placeholder"><span>Venue photo<br><small>images/venue.jpg</small></span></div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline reveal">
+  <h2>Timeline</h2>
+  <ol>
+    <li><span>Guest gathering</span><time>12:00</time></li>
+    <li><span>Wedding ceremony</span><time>12:30</time></li>
+    <li><span>Reception</span><time>13:30</time></li>
+    <li><span>End of evening</span><time>23:00</time></li>
+  </ol>
+</section>
+
+<!-- DRESS CODE -->
+<section class="ticket dresscode reveal">
+  <h2>Dress code</h2>
+  <p>We would love to see our family and friends in elegant and timeless attire. Our colour palette for the day:</p>
+  <ul class="swatches">
+    <li><i style="background:#ece6da"></i>Ivory</li>
+    <li><i style="background:#ddd0b6"></i>Cream</li>
+    <li><i style="background:#a89d90"></i>Taupe</li>
+    <li><i style="background:#0b1a33"></i>Navy</li>
+    <li><i style="background:#111"></i>Black</li>
+  </ul>
+  <h3>Women</h3>
+  <div class="photo photo-wide" role="img" aria-label="Women's attire placeholder"><span>Outfit inspiration<br><small>images/women.jpg</small></span></div>
+  <h3>Men</h3>
+  <div class="photo photo-wide" role="img" aria-label="Men's attire placeholder"><span>Outfit inspiration<br><small>images/men.jpg</small></span></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ticket footer reveal">
+  <p class="footer-title">Will you join us?</p>
+  <p>Please let us know by 21 April 2027</p>
+  <a class="btn" href="mailto:hello@example.com">RSVP</a>
+  <p class="footer-sign">Aisha &amp; Rayan</p>
+</footer>
+
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

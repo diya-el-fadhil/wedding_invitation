@@ -1,0 +1,4 @@
+.timeline h2{text-align:center;font-size:1.7rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.timeline ol{list-style:none;padding:0 6px 0 22px;border-left:1px solid var(--cream);margin-left:24px}
+.timeline li{display:flex;justify-content:space-between;padding:10px 0;position:relative}
+.timeline li::before{content:"";position:absolute;left:-28px;top:50%;width:9px;height:9px;margin-top:-4px;border:1px solid var(--cream);border-radius:50%;background:var(--navy)}

@@ -1,0 +1,4 @@
+.footer{text-align:center}
+.footer-title{font-size:1.7rem;letter-spacing:.1em;text-transform:uppercase}
+.footer .btn{margin:16px 0}
+.footer-sign{font-family:var(--script);font-size:2rem;color:var(--navy)}

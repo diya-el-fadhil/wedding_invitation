@@ -1,0 +1,9 @@
+.photo{aspect-ratio:4/3;border-radius:18px;background:linear-gradient(135deg,#2b3d5f,#516487);display:grid;place-items:center;text-align:center;color:#d8dbe3;overflow:hidden;background-size:cover;background-position:center}
+.photo small{opacity:.7}
+.photo-wide{margin-top:14px}
+/* To use a real photo: .photo{background-image:url(../images/couple.jpg)} */
+.flight-path{width:100%;margin-top:14px;overflow:visible}
+.flight-path path:first-child{fill:none;stroke:var(--cream);stroke-width:1;stroke-dasharray:3 4;opacity:.7}
+.plane{fill:var(--cream);offset-path:path("M5 40 C60 10, 120 45, 190 25 S270 20, 285 22");offset-rotate:auto;offset-distance:0%}
+.photo-block.in .plane{animation:fly 3.5s .4s ease-in-out forwards}
+@keyframes fly{to{offset-distance:100%}}

@@ -1,0 +1,10 @@
+.calendar{text-align:center}
+.calendar h3{font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;font-size:1rem}
+.cal-grid b{font-weight:600;color:#6c6a66}
+.cal-hl{position:relative;color:#fff;z-index:0}
+.cal-hl::before{content:"";position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px;background:var(--red);border-radius:50%;z-index:-1}
+.calendar.in .cal-hl::before{animation:pop .6s .5s both}
+@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:none}}
+.cal-save{margin-top:16px;padding-top:12px;border-top:1px dashed var(--taupe);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase}
+.cal-date{font-size:1.8rem;letter-spacing:.1em}
