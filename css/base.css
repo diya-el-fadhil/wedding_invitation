@@ -1,36 +1,37 @@
-/* Shared: colours, fonts, ticket edge. Change the palette here. */
-:root{--navy:#0b1a33;--navy-2:#13264a;--cream:#f1ece1;--ivory:#ece6da;--ink:#1c2233;--taupe:#a89d90;--red:#c0392b;
+/* Shared: colours, fonts, ticket edge. Change the palette here.
+   --main = burgundy (page background + ticket cut-outs), --cream = ticket/card colour. */
+:root{--main:#7b011e;--main-2:#96132f;--cream:#f5f1e6;--ivory:#ece6da;--ink:#3a0a14;--taupe:#a89d90;--red:#7b011e;
 --serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans","Helvetica Neue",Arial,sans-serif;--script:"Pinyon Script",cursive;}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
-body{background:var(--navy);color:var(--cream);font-family:var(--sans);font-size:1rem;line-height:1.6}
+body{background:var(--main);color:var(--cream);font-family:var(--sans);font-size:1rem;line-height:1.6}
 /* Fonts: serif only for the main headings, sans (DM Sans) for everything else. Change --sans above to swap the body font. */
 h1,h2,.cal-date,.footer-title{font-family:var(--serif)}
 .page{max-width:440px;margin:0 auto;padding:28px 20px 60px;display:flex;flex-direction:column;gap:36px}
 h1,h2,h3{font-weight:500;line-height:1.15}
 /* Ticket shape: scalloped edge on top and bottom only (sides stay straight) + half-circle notch at top and bottom centre (--n = number of scallops, always odd so one sits under the centre notch) + quarter-circle cut at the 4 corners (--cn).
-   The cut-outs are painted in the page colour (--navy), so keep the page background navy. */
+   The cut-outs are painted in the page colour (--main), so keep the page background the same colour. */
 .ticket{--sc:7px;--nt:22px;--cn:16px;--n:15;--p:calc((100% - 2 * var(--cn)) / var(--n));background-color:var(--cream);color:var(--ink);padding:30px 26px;position:relative;overflow:hidden;border-radius:0;
  background-image:
-  linear-gradient(var(--navy),var(--navy)),
-  radial-gradient(circle at 0 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 100% 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 0 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 100% 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 50% 0,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
-  radial-gradient(circle at 50% 100%,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
+  linear-gradient(var(--main),var(--main)),
+  radial-gradient(circle at 0 0,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 0,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 0 100%,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 100%,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 50% 0,var(--main) var(--nt),#0000 calc(var(--nt) + .5px)),
+  radial-gradient(circle at 50% 100%,var(--main) var(--nt),#0000 calc(var(--nt) + .5px)),
   linear-gradient(var(--cream),var(--cream)),
   linear-gradient(var(--cream),var(--cream)),
-  radial-gradient(circle at 50% 0,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px)),
-  radial-gradient(circle at 50% 100%,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px));
+  radial-gradient(circle at 50% 0,var(--main) var(--sc),#0000 calc(var(--sc) + .5px)),
+  radial-gradient(circle at 50% 100%,var(--main) var(--sc),#0000 calc(var(--sc) + .5px));
  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat-x,repeat-x;
  background-position:0 100%,0 0,100% 0,0 100%,100% 100%,center top,center bottom,center top,center bottom,var(--cn) 0,var(--cn) 100%;
  background-size:100% 1px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,calc(var(--p) * 3) 14px,calc(var(--p) * 3) 14px,var(--p) 14px,var(--p) 14px}
 /* the two cream layers hide the scallops right next to the centre notch so nothing overlaps it */
 @media (max-width:360px){.ticket{--n:11}}
-.btn{display:inline-block;background:var(--navy);color:var(--cream);padding:12px 26px;border-radius:4px;text-decoration:none;letter-spacing:.06em;transition:transform .2s,background .2s}
-.btn:hover,.btn:focus-visible{background:var(--navy-2);transform:translateY(-2px)}
+.btn{display:inline-block;background:var(--main);color:var(--cream);padding:12px 26px;border-radius:4px;text-decoration:none;letter-spacing:.06em;transition:transform .2s,background .2s}
+.btn:hover,.btn:focus-visible{background:var(--main-2);transform:translateY(-2px)}
 :focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}

@@ -3,7 +3,7 @@
 .timeline h2{text-align:center;font-size:1.7rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
 .timeline ol{list-style:none;padding:0 6px 0 22px;border-left:1px solid var(--cream);margin-left:24px;margin-right:100px}
 .timeline li{display:flex;justify-content:space-between;padding:12px 0;position:relative}
-.timeline li::before{content:"";position:absolute;left:-28px;top:50%;width:9px;height:9px;margin-top:-4px;border:1px solid var(--cream);border-radius:50%;background:var(--navy)}
+.timeline li::before{content:"";position:absolute;left:-28px;top:50%;width:9px;height:9px;margin-top:-4px;border:1px solid var(--cream);border-radius:50%;background:var(--main)}
 /* dotted flight path on the right, plane flies bottom to top once */
 .timeline-path{position:absolute;right:0;bottom:30px;width:96px;height:300px;overflow:visible}
 .timeline-path path:first-child{fill:none;stroke:var(--cream);stroke-width:1.3;stroke-dasharray:3 4;opacity:.7}

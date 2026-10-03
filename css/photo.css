@@ -1,4 +1,4 @@
-.photo{aspect-ratio:4/3;border-radius:18px;background:linear-gradient(135deg,#2b3d5f,#516487);display:grid;place-items:center;text-align:center;color:#d8dbe3;overflow:hidden;background-size:cover;background-position:center}
+.photo{aspect-ratio:4/3;border-radius:18px;background:linear-gradient(135deg,#5e0117,#93304a);display:grid;place-items:center;text-align:center;color:#f0e4e6;overflow:hidden;background-size:cover;background-position:center}
 .photo small{opacity:.7}
 .photo-wide{margin-top:14px}
 /* To use a real photo: .photo{background-image:url(../images/couple.jpg)} */

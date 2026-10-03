@@ -1,19 +1,19 @@
 /* Dress code: ticket with the curves and semicircle on the LEFT and RIGHT sides.
-   Cut-outs are painted in the page colour (--navy). --n = number of side curves (odd). */
+   Cut-outs are painted in the page colour (--main). --n = number of side curves (odd). */
 .dresscode{--sc:7px;--nt:22px;--cn:16px;--n:7;--p:calc((100% - 2 * var(--cn)) / var(--n));
  position:relative;overflow:hidden;text-align:center;margin-inline:-12px;padding:24px 44px 22px;background-color:var(--cream);color:var(--ink);
  background-image:
-  linear-gradient(var(--navy),var(--navy)),
-  radial-gradient(circle at 0 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 100% 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 0 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 100% 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
-  radial-gradient(circle at 0 50%,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
-  radial-gradient(circle at 100% 50%,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
+  linear-gradient(var(--main),var(--main)),
+  radial-gradient(circle at 0 0,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 0,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 0 100%,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 100%,var(--main) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 0 50%,var(--main) var(--nt),#0000 calc(var(--nt) + .5px)),
+  radial-gradient(circle at 100% 50%,var(--main) var(--nt),#0000 calc(var(--nt) + .5px)),
   linear-gradient(var(--cream),var(--cream)),
   linear-gradient(var(--cream),var(--cream)),
-  radial-gradient(circle at 0 50%,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px)),
-  radial-gradient(circle at 100% 50%,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px));
+  radial-gradient(circle at 0 50%,var(--main) var(--sc),#0000 calc(var(--sc) + .5px)),
+  radial-gradient(circle at 100% 50%,var(--main) var(--sc),#0000 calc(var(--sc) + .5px));
  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat-y,repeat-y;
  background-position:0 100%,0 0,100% 0,0 100%,100% 100%,0 0,0 0,left center,right center,0 var(--cn),100% var(--cn);
  background-size:100% 1px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,14px calc(var(--p) * 3),14px calc(var(--p) * 3),14px var(--p),14px var(--p)}

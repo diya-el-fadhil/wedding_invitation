@@ -2,8 +2,8 @@
 .hero-top,.hero-bottom{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;padding:6px 0;border-bottom:1px dashed var(--taupe)}
 .hero-bottom{border:0;border-top:1px dashed var(--taupe);margin-top:22px}
 .hero-globe{display:block;width:130px;height:auto;margin:22px auto 6px}
-.hero-names{font-size:clamp(1.55rem,7.2vw,1.95rem);text-transform:uppercase;font-weight:500}
-.hero-and{display:block;font-family:var(--script);text-transform:none;letter-spacing:0;line-height:1.5em;font-size:1.8rem;;color:var(--taupe)}
+.hero-names{font-size:clamp(1.55rem,7.2vw,2.05rem);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.hero-and{display:block;font-family:var(--script);text-transform:none;letter-spacing:0;font-size:1.8rem;color:var(--taupe)}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--taupe);margin-top:22px;text-align:left}
 .hero-grid div{padding:10px 12px;border:1px solid var(--taupe);margin:-.5px}
 .hero-grid dt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6c6a66}
