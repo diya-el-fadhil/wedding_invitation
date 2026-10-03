@@ -7,7 +7,7 @@
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--taupe);margin-top:22px;text-align:left}
 .hero-grid div{padding:10px 12px;border:1px solid var(--taupe);margin:-.5px}
 .hero-grid dt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6c6a66}
-.hero-grid dd{font-size:1.05rem;font-weight:600;margin:0}
+.hero-grid dd{font-size:.95rem;font-weight:600;margin:0}
 .hero-stamp{display:block;width:230px;height:auto;margin:20px auto 0;transform:rotate(-4deg)}
 .reveal-stamp{animation:stamp .6s .6s both cubic-bezier(.2,1.6,.4,1)}
 @keyframes stamp{from{opacity:0;transform:rotate(-4deg) scale(1.8)}to{opacity:.9;transform:rotate(-4deg) scale(1)}}

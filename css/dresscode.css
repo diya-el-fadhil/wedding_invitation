@@ -1,6 +1,9 @@
-.dresscode{text-align:center}
+/* Full-width colour panel (not a ticket) with small pointed scallops on top */
+.dresscode{--edge:8px;position:relative;width:100vw;margin-inline:calc(50% - 50vw);padding:38px max(46px,calc(50vw - 174px)) 44px;text-align:center;background:var(--cream);color:var(--ink)}
+.dresscode::before{content:"";position:absolute;left:0;right:0;top:calc(var(--edge) * -1);height:calc(var(--edge) + 1px);
+ background:radial-gradient(circle at 50% 0,#0000 var(--edge),var(--cream) calc(var(--edge) + .5px)) 0 0 / calc(var(--edge) * 2) 100% repeat-x}
 .dresscode h2{font-size:1.7rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
-.dresscode h3{margin-top:20px;font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase}
+.dresscode h3{margin-top:20px;font-size:1.05rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .dresscode p{font-size:1rem}
 .swatches{list-style:none;padding:0;display:flex;justify-content:space-between;margin-top:14px;font-size:.75rem}
 .swatches i{display:block;width:44px;height:44px;border-radius:50%;margin:0 auto 4px;border:1px solid #0002}

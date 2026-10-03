@@ -1,5 +1,6 @@
-.calendar{text-align:center}
-.calendar h3{font-size:1.3rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+/* plain rounded card (not a ticket shape) */
+.calendar{text-align:center;background:var(--cream);color:var(--ink);border-radius:20px;padding:26px 22px}
+.calendar h3{font-size:1.05rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;font-size:1rem}
 .cal-grid b{font-weight:600;color:#6c6a66}
 .cal-hl{position:relative;color:#fff;z-index:0}

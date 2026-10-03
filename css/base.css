@@ -1,9 +1,12 @@
 /* Shared: colours, fonts, ticket edge. Change the palette here. */
 :root{--navy:#0b1a33;--navy-2:#13264a;--cream:#f1ece1;--ivory:#ece6da;--ink:#1c2233;--taupe:#a89d90;--red:#c0392b;
---serif:"Cormorant Garamond",Georgia,serif;--script:"Pinyon Script",cursive;}
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"DM Sans","Helvetica Neue",Arial,sans-serif;--script:"Pinyon Script",cursive;}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--cream);font-family:var(--serif);font-size:1.1rem;line-height:1.6}
+body{overflow-x:hidden}
+body{background:var(--navy);color:var(--cream);font-family:var(--sans);font-size:1rem;line-height:1.6}
+/* Fonts: serif only for the main headings, sans (DM Sans) for everything else. Change --sans above to swap the body font. */
+h1,h2,.cal-date,.footer-title{font-family:var(--serif)}
 .page{max-width:440px;margin:0 auto;padding:28px 20px 60px;display:flex;flex-direction:column;gap:36px}
 h1,h2,h3{font-weight:500;line-height:1.15}
 /* Ticket shape: scalloped edge on top and bottom only (sides stay straight) + half-circle notch at top and bottom centre (--n = number of scallops, always odd so one sits under the centre notch) + quarter-circle cut at the 4 corners (--cn).
