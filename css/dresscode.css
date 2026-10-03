@@ -1,9 +1,23 @@
-/* Full-width colour panel (not a ticket) with small pointed scallops on top */
-.dresscode{--edge:8px;position:relative;width:100vw;margin-inline:calc(50% - 50vw);padding:38px max(46px,calc(50vw - 174px)) 44px;text-align:center;background:var(--cream);color:var(--ink)}
-.dresscode::before{content:"";position:absolute;left:0;right:0;top:calc(var(--edge) * -1);height:calc(var(--edge) + 1px);
- background:radial-gradient(circle at 50% 0,#0000 var(--edge),var(--cream) calc(var(--edge) + .5px)) 0 0 / calc(var(--edge) * 2) 100% repeat-x}
-.dresscode h2{font-size:1.7rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
-.dresscode h3{margin-top:20px;font-size:1.05rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-.dresscode p{font-size:1rem}
-.swatches{list-style:none;padding:0;display:flex;justify-content:space-between;margin-top:14px;font-size:.75rem}
-.swatches i{display:block;width:44px;height:44px;border-radius:50%;margin:0 auto 4px;border:1px solid #0002}
+/* Dress code: ticket with the curves and semicircle on the LEFT and RIGHT sides.
+   Cut-outs are painted in the page colour (--navy). --n = number of side curves (odd). */
+.dresscode{--sc:7px;--nt:22px;--cn:16px;--n:7;--p:calc((100% - 2 * var(--cn)) / var(--n));
+ position:relative;overflow:hidden;text-align:center;margin-inline:-12px;padding:24px 44px 22px;background-color:var(--cream);color:var(--ink);
+ background-image:
+  linear-gradient(var(--navy),var(--navy)),
+  radial-gradient(circle at 0 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 0,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 0 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 100% 100%,var(--navy) var(--cn),#0000 calc(var(--cn) + .5px)),
+  radial-gradient(circle at 0 50%,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
+  radial-gradient(circle at 100% 50%,var(--navy) var(--nt),#0000 calc(var(--nt) + .5px)),
+  linear-gradient(var(--cream),var(--cream)),
+  linear-gradient(var(--cream),var(--cream)),
+  radial-gradient(circle at 0 50%,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px)),
+  radial-gradient(circle at 100% 50%,var(--navy) var(--sc),#0000 calc(var(--sc) + .5px));
+ background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat-y,repeat-y;
+ background-position:0 100%,0 0,100% 0,0 100%,100% 100%,0 0,0 0,left center,right center,0 var(--cn),100% var(--cn);
+ background-size:100% 1px,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,14px calc(var(--p) * 3),14px calc(var(--p) * 3),14px var(--p),14px var(--p)}
+.dresscode h2{font-size:1.55rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.dresscode p{font-size:.95rem;line-height:1.5}
+.swatches{list-style:none;padding:0;display:flex;justify-content:space-between;margin-top:12px;font-size:.72rem}
+.swatches i{display:block;width:38px;height:38px;border-radius:50%;margin:0 auto 4px;border:1px solid #0002}
