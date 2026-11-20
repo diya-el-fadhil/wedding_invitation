@@ -23,3 +23,6 @@
 .timeline.in .mask-path{animation:draw-tl 3.5s .4s ease-in-out forwards}
 @keyframes draw-tl{to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){.timeline-path .mask-path{stroke-dashoffset:0}.tl-plane{offset-distance:100%}}
+/* keep times on one line; give the text more room on small phones */
+.timeline time{white-space:nowrap;flex-shrink:0;margin-left:12px}
+@media (max-width:400px){.timeline ol{margin-right:86px;margin-left:18px}.timeline li{font-size:.95rem}.timeline-path{width:72px;height:225px}}
