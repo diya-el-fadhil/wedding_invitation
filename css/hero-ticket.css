@@ -21,5 +21,3 @@
 .js:not(.is-loaded) .w{opacity:0}
 .is-loaded .w{animation:word .9s ease both;animation-delay:calc(.8s + var(--i) * .35s)}
 @keyframes word{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-/* bottom strip lifts a little as the guest scrolls (set by js/effects.js) */
-.hero-bottom{transform-origin:0 0;transform:rotate(calc(var(--tear,0) * -1.8deg)) translateY(calc(var(--tear,0) * -3px))}

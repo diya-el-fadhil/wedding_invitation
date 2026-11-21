@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="css/memories.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/rsvp.css">
-<link rel="stylesheet" href="css/effects.css">
 <link rel="stylesheet" href="css/music.css">
 </head>
 <body>
@@ -83,6 +82,7 @@
     <div><b data-unit="days">0</b><span>Days</span></div>
     <div><b data-unit="hours">0</b><span>Hours</span></div>
     <div><b data-unit="mins">0</b><span>Minutes</span></div>
+    <div><b data-unit="secs">0</b><span>Seconds</span></div>
   </div>
   <button type="button" class="btn cal-add" id="add-cal">Add to calendar</button>
 </section>
@@ -150,7 +150,7 @@
 </main>
 <!-- Background music: add your file as audio/music.mp3 (plays only when a guest taps the button) -->
 <audio id="bg-music" src="audio/music.mp3" loop preload="metadata"></audio>
-<button type="button" class="music-btn" id="music-btn" aria-label="Play music" aria-pressed="false" hidden>
+<button type="button" class="music-btn" id="music-btn" aria-label="Play music" aria-pressed="false">
   <svg class="ico-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 9l6 6M22 9l-6 6"/></svg>
   <svg class="ico-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
 </button>

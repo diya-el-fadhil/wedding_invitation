@@ -5,7 +5,7 @@
   if (box) {
     const el = u => box.querySelector(`[data-unit="${u}"]`);
     const left = () => Math.max(0, target - Date.now());
-    const parts = ms => ({ days: Math.floor(ms / 864e5), hours: Math.floor(ms / 36e5) % 24, mins: Math.floor(ms / 6e4) % 60 });
+    const parts = ms => ({ days: Math.floor(ms / 864e5), hours: Math.floor(ms / 36e5) % 24, mins: Math.floor(ms / 6e4) % 60, secs: Math.floor(ms / 1e3) % 60 });
     const show = (p, f = 1) => Object.keys(p).forEach(u => el(u).textContent = Math.round(p[u] * f));
     const refresh = () => {
       if (Date.now() >= target) { box.outerHTML = '<p class="countdown-done">Thank you for celebrating with us</p>'; return false; }
@@ -15,12 +15,12 @@
     const start = () => {
       if (started) return; started = true;
       const p = parts(left());
-      if (matchMedia("(prefers-reduced-motion: reduce)").matches) { if (refresh()) setInterval(refresh, 30000); return; }
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) { if (refresh()) setInterval(refresh, 1000); return; }
       const t0 = performance.now();                          // numbers count up once
       const tick = now => {
         const k = Math.min((now - t0) / 1500, 1), e = 1 - Math.pow(1 - k, 3);
         show(p, e);
-        if (k < 1) requestAnimationFrame(tick); else if (refresh()) setInterval(refresh, 30000);
+        if (k < 1) requestAnimationFrame(tick); else if (refresh()) setInterval(refresh, 1000);
       };
       requestAnimationFrame(tick);
     };

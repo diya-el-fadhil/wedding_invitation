@@ -4,7 +4,7 @@
 /* Real photos: save them in /images with these names. If a file is missing, the burgundy placeholder shows. */
 /* couple photo sits on its own layer so it can move slower than the page (parallax) */
 .photo-couple{position:relative;background-image:linear-gradient(135deg,#5e0117,#93304a)}
-.photo-couple::before{content:"";position:absolute;inset:-12% 0;background:url(../images/couple.jpg) center/cover no-repeat;transform:translateY(var(--py,0px))}
+.photo-couple::before{content:"";position:absolute;inset:-17% 0;background:url(../images/couple.jpg) center/cover no-repeat;transform:translateY(var(--py,0px))}
 .photo-venue{background-image:url(../images/venue.jpg),linear-gradient(135deg,#5e0117,#93304a)}
 .flight-path{width:100%;margin-top:14px;overflow:visible}
 .flight-path .dots{fill:none;stroke:var(--cream);stroke-width:1;stroke-dasharray:3 4;opacity:.7}
