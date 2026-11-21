@@ -10,3 +10,10 @@
 .cal-save{margin-top:16px;padding-top:12px;border-top:1px dashed var(--taupe);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase}
 .cal-date{font-size:1.8rem;letter-spacing:.1em}
 @keyframes beat{0%,100%{transform:scale(1)}30%{transform:scale(1.2)}60%{transform:scale(1)}}
+/* countdown + add-to-calendar */
+.countdown{display:flex;justify-content:center;gap:12px;margin-top:18px}
+.countdown div{min-width:72px;padding:10px 6px 8px;border:1px solid var(--taupe);border-radius:12px}
+.countdown b{display:block;font-family:var(--serif);font-size:1.9rem;font-weight:500;line-height:1.1;color:var(--main);font-variant-numeric:tabular-nums}
+.countdown span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#6c6a66}
+.countdown-done{margin-top:18px;font-family:var(--serif);font-size:1.2rem;color:var(--main)}
+.cal-add{margin-top:18px;border:0;font:inherit;cursor:pointer}

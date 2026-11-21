@@ -1,0 +1,10 @@
+/* Music button (appears only if audio/music.mp3 exists) */
+.music-btn{position:fixed;right:16px;bottom:16px;z-index:900;width:46px;height:46px;border-radius:50%;border:1px solid var(--cream);background:var(--main);color:var(--cream);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px #0005;transition:transform .2s}
+.music-btn:hover{transform:scale(1.06)}
+.music-btn[hidden]{display:none}
+.music-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;grid-area:1/1}
+.music-btn .ico-on{display:none}
+.music-btn.playing .ico-on{display:block}
+.music-btn.playing .ico-off{display:none}
+.music-btn.playing{animation:music-pulse 2.4s ease-in-out infinite}
+@keyframes music-pulse{50%{box-shadow:0 0 0 7px #f5f1e622}}

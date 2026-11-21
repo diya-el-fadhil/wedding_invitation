@@ -9,10 +9,17 @@
 .hero-grid dt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6c6a66}
 .hero-grid dd{font-size:.95rem;font-weight:600;margin:0}
 .hero-stamp{display:block;width:230px;height:auto;margin:20px auto 0;transform:rotate(-4deg)}
-.reveal-stamp{animation:stamp .6s .6s both cubic-bezier(.2,1.6,.4,1)}
-@keyframes stamp{from{opacity:0;transform:rotate(-4deg) scale(1.8)}to{opacity:.9;transform:rotate(-4deg) scale(1)}}
+.reveal-stamp{animation:stamp 1.2s .9s both cubic-bezier(.2,1.6,.4,1)}
+@keyframes stamp{0%{opacity:0;transform:rotate(-4deg) scale(1.8)}55%{opacity:.9;transform:rotate(-4deg) scale(1)}70%{transform:rotate(-8deg)}85%{transform:rotate(-2deg)}100%{opacity:.9;transform:rotate(-4deg)}}
 /* ticket slides down and settles when the page opens */
 .hero-ticket{animation:settle 1s cubic-bezier(.2,.8,.2,1) both}
 @keyframes settle{from{opacity:0;transform:translateY(-36px) rotate(-1.5deg)}to{opacity:1;transform:none}}
 /* wait for the loading screen before animating */
 .js:not(.is-loaded) .hero-ticket,.js:not(.is-loaded) .reveal-stamp{animation:none;opacity:0}
+/* names appear one word at a time after the loader */
+.w:not(.hero-and){display:inline-block}
+.js:not(.is-loaded) .w{opacity:0}
+.is-loaded .w{animation:word .9s ease both;animation-delay:calc(.8s + var(--i) * .35s)}
+@keyframes word{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* bottom strip lifts a little as the guest scrolls (set by js/effects.js) */
+.hero-bottom{transform-origin:0 0;transform:rotate(calc(var(--tear,0) * -1.8deg)) translateY(calc(var(--tear,0) * -3px))}
