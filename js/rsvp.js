@@ -28,7 +28,7 @@
 
     const thanks = document.createElement("div");         // 3) fade in the message
     thanks.className = "rsvp-thanks";
-    thanks.innerHTML = '<h2>THANK YOU FOR COMING!</h2><button type="button" class="rsvp-close" aria-label="Close">&times;</button>';
+    thanks.innerHTML = '<h2>THANK YOU FOR COMING!</h2><p class="thanks-dua">JazakAllahu khairan</p><button type="button" class="rsvp-close" aria-label="Close">&times;</button>';
     document.body.append(thanks);
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {   // soft falling petals
       const box = document.createElement("div");

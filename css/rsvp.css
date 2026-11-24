@@ -13,3 +13,4 @@ body.rsvp-open{overflow:hidden}
 .rsvp-thanks h2{position:relative;z-index:1}
 .petal{position:absolute;top:-30px;border-radius:70% 0 70% 0;opacity:.85;animation:petal-fall linear infinite}
 @keyframes petal-fall{0%{transform:translate(0,-30px) rotate(0)}50%{transform:translate(var(--sway),55vh) rotate(180deg)}100%{transform:translate(calc(var(--sway) * -.5),115vh) rotate(360deg)}}
+.rsvp-thanks .thanks-dua{position:relative;z-index:1;margin-top:12px;font-family:var(--script);font-size:1.9rem}

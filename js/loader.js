@@ -10,6 +10,13 @@
 
   if (audio) audio.addEventListener("error", () => { noMusic = true; if (ready) open(); });
 
+  function playMusic() {                             // must run inside the tap for the browser to allow sound
+    if (!audio || noMusic) return;
+    audio.muted = false;
+    audio.volume = 0.6;
+    const p = audio.play();
+    if (p && p.catch) p.catch(() => {});
+  }
   function open() {
     if (opened) return;
     opened = true;
@@ -21,7 +28,7 @@
     ready = true;
     if (!loader || noMusic) return open();
     loader.classList.add("ready");
-    loader.addEventListener("click", open);          // music.js starts the song on this same tap
+    loader.addEventListener("click", () => { playMusic(); open(); });   // the tap itself starts the song
   }
   const wait = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : Math.max(0, 2000 - (performance.now() - start));
   const go = () => setTimeout(showGate, wait);
