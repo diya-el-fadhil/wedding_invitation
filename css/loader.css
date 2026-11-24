@@ -13,3 +13,9 @@ html.js:not(.is-loaded) body{overflow:hidden}
 @keyframes loader-spin{to{transform:rotate(360deg)}}
 @keyframes loader-float{50%{transform:translateY(-6px)}}
 @keyframes loader-dots{0%{content:""}25%{content:"."}50%{content:".."}75%,100%{content:"..."}}
+/* "Tap to open" step: the tap is what allows the browser to start the music */
+.loader-open{display:none;border:0;font:inherit;cursor:pointer;background:var(--main);color:var(--cream);padding:13px 34px;border-radius:999px;letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;animation:loader-pulse 1.8s ease-in-out infinite}
+.loader.ready{cursor:pointer}
+.loader.ready .loader-text{display:none}
+.loader.ready .loader-open{display:inline-block}
+@keyframes loader-pulse{50%{box-shadow:0 0 0 9px #7b011e22}}
